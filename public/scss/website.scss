@@ -1,0 +1,313 @@
+@import "colors";
+
+* {
+    font-family: "Roboto", sans-serif;
+}
+
+a {
+    color: $blue;
+    transition: all 0.1s linear;
+}
+
+a:hover {
+    color: $dark-blue;
+}
+
+body {
+    background-color: $black;
+}
+
+// GENERAL
+
+.ui.button {
+    border-radius: 0rem;
+}
+
+.ui.inverted.button {
+    color: $black;
+    font-family: "Roboto", sans-serif;
+    background-color: $white;
+    border: 0px;
+    text-transform: uppercase;
+    font-size: 1.5em;
+    box-shadow: inset 0px 0px 0px 0px $yellow !important;
+    transition: all ease 0.3s;
+}
+
+.ui.inverted.button:hover {
+    background-color: $yellow;
+    border-color: $yellow;
+    box-shadow: inset 0px 100px 0px 0px $yellow !important;
+}
+
+// LANDING PAGE
+
+#landing-container {
+    background-image: url("../img/background.jpg");
+    background-size: cover;
+}
+
+#landing {
+    height: 100vh;
+
+    h1, p {
+        color: $white;
+    }
+
+    h1 {
+        font-family: "Roboto", sans-serif;
+        font-weight: 300;
+        font-size: 10em;
+        text-transform: uppercase;
+        margin: -3% 0%;
+        letter-spacing: 20px;
+    }
+
+    p {
+        font-size: 1.5em;
+    }
+
+    .ui.grid {
+        height: 80%;
+    }
+
+    .ui.secondary.menu {
+        padding-top: 2%;
+    }
+}
+
+// HEADERS
+
+#about-header, #teams-header, #participate-header {
+    padding: 2% 0%;
+}
+
+#about-header {
+    background-image: url("../img/header/about.jpg");
+    background-size: cover;
+}
+
+#teams-header {
+    background-image: url("../img/header/teams.jpg");
+    background-size: cover;
+}
+
+#participate-header {
+    background-image: url("../img/header/participate.jpg");
+    background-size: cover;
+}
+
+#about, #teams, #participate {
+    padding: 10%;
+
+    h1 {
+        font-family: "Roboto", sans-serif;
+        font-weight: 700;
+        font-size: 8em;
+        color: $white;
+    }
+}
+
+// NAVIGATION
+
+.ui.secondary.menu a.item {
+    font-family: "Roboto", sans-serif;
+    font-weight: 400;
+    font-size: 1.2em;
+    text-transform: uppercase;
+    color: $white;
+    transition: all 0.1s linear;
+}
+
+.ui.secondary.menu a.item:hover {
+    background: none;
+    color: $yellow;
+}
+
+// ABOUT
+
+.ui.header {
+    color: $white;
+}
+
+#overview, #tickets, #partners, #venue, #liaison, #sponsor {
+    padding: 2%;
+    padding-bottom: 4%;
+
+    .ui.header {
+        padding: 2%;
+        font-family: "Roboto", sans-serif;
+        font-size: 2em;
+        text-transform: uppercase;
+    }
+}
+
+#stats {
+    background-color: $black;
+    padding: 2%;
+
+    h1, h3 {
+        font-family: "Roboto", sans-serif;
+    }
+
+    h1 {
+        color: $yellow;
+        font-size: 5em;
+        text-align: center;
+        margin: 0px;
+    }
+
+    h3 {
+        color: $white;
+        text-align: center;
+        margin: 0px;
+        text-transform: uppercase;
+    }
+}
+
+#overview {
+    background-color: $white;
+
+    .ui.header {
+        color: $black;
+    }
+
+    p {
+        font-family: inherit;
+    }
+}
+
+#tickets {
+    .ui.header {
+        color: $white;
+    }
+
+    h3 {
+        color: $white;
+        margin: 0px;
+        font-family: inherit;
+        font-size: 1.5em;
+        text-transform: uppercase;
+        text-align: center;
+    }
+
+    .ui.image {
+        margin-bottom: 5%;
+    }
+
+    .available {
+        color: $green;
+    }
+
+    .sold.out {
+        color: $red;
+    }
+
+    .ui.inverted.button {
+        margin-top: 2%;
+        font-size: 1em;
+    }
+}
+
+#partners {
+    background-color: $white;
+
+    .ui.header {
+        color: $black;
+    }
+}
+
+#venue {
+    p {
+        color: $white;
+    }
+
+    .ui.inverted.button {
+        margin-top: 2%;
+        font-size: 1em;
+        border-color: $white;
+        text-transform: capitalize;
+        box-shadow: inset 0px 0px 0px 0px $yellow !important;
+    }
+
+    .ui.inverted.button:hover {
+        box-shadow: inset 0px 100px 0px 0px $yellow !important;
+        background-color: $blue;
+    }
+}
+
+
+// TEAMS
+
+#team1, #team2, #team3, #team4,
+#team5, #team6, #team7, #team8 {
+
+    .ui.grid {
+        height: 100vh;
+    }
+
+    h2 {
+        font-family: "Open Sans";
+        font-size: 12em;
+        text-transform: uppercase;
+        letter-spacing: -0.1em;
+        line-height: 75%;
+        margin-bottom: 7%;
+    }
+
+    border-bottom: 1px solid #FAFAFA;
+}
+
+#team1, #team3, #team5, #team7 {
+    color: $black;
+    background-color: $yellow;
+}
+
+#team2, #team4, #team6, #team8 {
+    color: $white;
+    background-color: $black;
+}
+
+// PARTICIPATE
+
+#liaison {
+    background-color: $white;
+
+    h2 {
+        color: $black;
+    }
+
+    .ui.inverted.button {
+        margin-top: 2%;
+        font-size: 1em;
+        text-transform: capitalize;
+        background-color: $black;
+        color: $white;
+    }
+
+    .ui.inverted.button:hover {
+        color: $white;
+    }
+}
+
+#sponsor {
+    background-color: $black;
+
+    p {
+        color: $white;
+    }
+
+    .ui.inverted.button {
+        margin-top: 2%;
+        font-size: 1em;
+        text-transform: capitalize;
+    }
+}
+
+// FOOTER
+
+.ui.footer {
+    font-family: "Roboto", sans-serif;
+    padding: 2%;
+    background-color: $white;
+}
