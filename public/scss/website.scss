@@ -17,6 +17,10 @@ body {
     background-color: $black;
 }
 
+#jhalak-logo {
+    width: 120px;
+}
+
 // GENERAL
 
 .ui.button {
@@ -55,12 +59,12 @@ body {
     }
 
     h1 {
-        font-family: "Roboto", sans-serif;
-        font-weight: 300;
+        font-family: "Helvetica Neue", sans-serif;
+        font-weight: 100;
         font-size: 10em;
         text-transform: uppercase;
         margin: -3% 0%;
-        letter-spacing: 20px;
+        letter-spacing: 35px;
     }
 
     p {
@@ -79,22 +83,23 @@ body {
 // HEADERS
 
 #about-header, #teams-header, #participate-header {
+    background-position: center;
+    background-size: cover;
     padding: 2% 0%;
 }
 
 #about-header {
     background-image: url("../img/header/about.jpg");
-    background-size: cover;
+
 }
 
 #teams-header {
     background-image: url("../img/header/teams.jpg");
-    background-size: cover;
 }
 
 #participate-header {
     background-image: url("../img/header/participate.jpg");
-    background-size: cover;
+    background-position: top;
 }
 
 #about, #teams, #participate {
@@ -142,6 +147,26 @@ body {
     }
 }
 
+#overview, #tickets, #partners, #venue {
+    h1 {
+        font-family: "Roboto", sans-serif;
+        color: $white;
+        text-transform: uppercase;
+        font-size: 5em;
+        margin-bottom: 5%;
+
+        background: rgb(245,203,92);
+        background: -moz-linear-gradient(-45deg,  rgba(245,203,92,1) 50%, rgba(255,255,255,1) 50%, rgba(255,255,255,1) 50%);
+        background: -webkit-linear-gradient(-45deg,  rgba(245,203,92,1) 50%,rgba(255,255,255,1) 50%,rgba(255,255,255,1) 50%);
+        background: linear-gradient(135deg,  rgba(245,203,92,1) 50%,rgba(255,255,255,1) 50%,rgba(255,255,255,1) 50%);
+        filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f5cb5c', endColorstr='#ffffff',GradientType=1 );
+
+        background-size: cover;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+    }
+}
+
 #stats {
     background-color: $black;
     padding: 2%;
@@ -166,18 +191,29 @@ body {
 }
 
 #overview {
-    background-color: $white;
-
-    .ui.header {
-        color: $black;
-    }
+    background-color: $dark-black;
+    border-bottom: 1px solid $yellow;
 
     p {
-        font-family: inherit;
+        color: $white;
+        font-family: "Roboto", sans-serif;
+        text-align: left;
+    }
+}
+
+#overview-container, #tickets-container, #venue-container,
+#partners-container {
+    height: 100vh;
+
+    .ui.grid {
+        height: 100%;
     }
 }
 
 #tickets {
+    background-color: $dark-black;
+    border-bottom: 1px solid $yellow;
+
     .ui.header {
         color: $white;
     }
@@ -186,9 +222,9 @@ body {
         color: $white;
         margin: 0px;
         font-family: inherit;
-        font-size: 1.5em;
+        font-size: 2em;
         text-transform: uppercase;
-        text-align: center;
+        //text-align: center;
     }
 
     .ui.image {
@@ -210,7 +246,7 @@ body {
 }
 
 #partners {
-    background-color: $white;
+    background-color: $dark-black;
 
     .ui.header {
         color: $black;
@@ -218,8 +254,12 @@ body {
 }
 
 #venue {
+    background-color: $dark-black;
+    border-bottom: 1px solid $yellow;
+
     p {
         color: $white;
+        text-align: left;
     }
 
     .ui.inverted.button {

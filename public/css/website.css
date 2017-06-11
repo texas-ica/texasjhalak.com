@@ -11,6 +11,9 @@ a:hover {
 body {
   background-color: #242423; }
 
+#jhalak-logo {
+  width: 120px; }
+
 .ui.button {
   border-radius: 0rem; }
 
@@ -38,12 +41,12 @@ body {
   #landing h1, #landing p {
     color: #FFFFFF; }
   #landing h1 {
-    font-family: "Roboto", sans-serif;
-    font-weight: 300;
+    font-family: "Helvetica Neue", sans-serif;
+    font-weight: 100;
     font-size: 10em;
     text-transform: uppercase;
     margin: -3% 0%;
-    letter-spacing: 20px; }
+    letter-spacing: 35px; }
   #landing p {
     font-size: 1.5em; }
   #landing .ui.grid {
@@ -52,19 +55,19 @@ body {
     padding-top: 2%; }
 
 #about-header, #teams-header, #participate-header {
+  background-position: center;
+  background-size: cover;
   padding: 2% 0%; }
 
 #about-header {
-  background-image: url("../img/header/about.jpg");
-  background-size: cover; }
+  background-image: url("../img/header/about.jpg"); }
 
 #teams-header {
-  background-image: url("../img/header/teams.jpg");
-  background-size: cover; }
+  background-image: url("../img/header/teams.jpg"); }
 
 #participate-header {
   background-image: url("../img/header/participate.jpg");
-  background-size: cover; }
+  background-position: top; }
 
 #about, #teams, #participate {
   padding: 10%; }
@@ -98,6 +101,21 @@ body {
     font-size: 2em;
     text-transform: uppercase; }
 
+#overview h1, #tickets h1, #partners h1, #venue h1 {
+  font-family: "Roboto", sans-serif;
+  color: #FFFFFF;
+  text-transform: uppercase;
+  font-size: 5em;
+  margin-bottom: 5%;
+  background: #f5cb5c;
+  background: -moz-linear-gradient(-45deg, #f5cb5c 50%, white 50%, white 50%);
+  background: -webkit-linear-gradient(-45deg, #f5cb5c 50%, white 50%, white 50%);
+  background: linear-gradient(135deg, #f5cb5c 50%, white 50%, white 50%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f5cb5c', endColorstr='#ffffff',GradientType=1 );
+  background-size: cover;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent; }
+
 #stats {
   background-color: #242423;
   padding: 2%; }
@@ -115,47 +133,61 @@ body {
     text-transform: uppercase; }
 
 #overview {
-  background-color: #FFFFFF; }
-  #overview .ui.header {
-    color: #242423; }
+  background-color: #000000;
+  border-bottom: 1px solid #F5CB5C; }
   #overview p {
-    font-family: inherit; }
+    color: #FFFFFF;
+    font-family: "Roboto", sans-serif;
+    text-align: left; }
 
-#tickets .ui.header {
-  color: #FFFFFF; }
-#tickets h3 {
-  color: #FFFFFF;
-  margin: 0px;
-  font-family: inherit;
-  font-size: 1.5em;
-  text-transform: uppercase;
-  text-align: center; }
-#tickets .ui.image {
-  margin-bottom: 5%; }
-#tickets .available {
-  color: #06D6A0; }
-#tickets .sold.out {
-  color: #EF476F; }
-#tickets .ui.inverted.button {
-  margin-top: 2%;
-  font-size: 1em; }
+#overview-container, #tickets-container, #venue-container,
+#partners-container {
+  height: 100vh; }
+  #overview-container .ui.grid, #tickets-container .ui.grid, #venue-container .ui.grid,
+  #partners-container .ui.grid {
+    height: 100%; }
+
+#tickets {
+  background-color: #000000;
+  border-bottom: 1px solid #F5CB5C; }
+  #tickets .ui.header {
+    color: #FFFFFF; }
+  #tickets h3 {
+    color: #FFFFFF;
+    margin: 0px;
+    font-family: inherit;
+    font-size: 2em;
+    text-transform: uppercase; }
+  #tickets .ui.image {
+    margin-bottom: 5%; }
+  #tickets .available {
+    color: #06D6A0; }
+  #tickets .sold.out {
+    color: #EF476F; }
+  #tickets .ui.inverted.button {
+    margin-top: 2%;
+    font-size: 1em; }
 
 #partners {
-  background-color: #FFFFFF; }
+  background-color: #000000; }
   #partners .ui.header {
     color: #242423; }
 
-#venue p {
-  color: #FFFFFF; }
-#venue .ui.inverted.button {
-  margin-top: 2%;
-  font-size: 1em;
-  border-color: #FFFFFF;
-  text-transform: capitalize;
-  box-shadow: inset 0px 0px 0px 0px #F5CB5C !important; }
-#venue .ui.inverted.button:hover {
-  box-shadow: inset 0px 100px 0px 0px #F5CB5C !important;
-  background-color: #198CFF; }
+#venue {
+  background-color: #000000;
+  border-bottom: 1px solid #F5CB5C; }
+  #venue p {
+    color: #FFFFFF;
+    text-align: left; }
+  #venue .ui.inverted.button {
+    margin-top: 2%;
+    font-size: 1em;
+    border-color: #FFFFFF;
+    text-transform: capitalize;
+    box-shadow: inset 0px 0px 0px 0px #F5CB5C !important; }
+  #venue .ui.inverted.button:hover {
+    box-shadow: inset 0px 100px 0px 0px #F5CB5C !important;
+    background-color: #198CFF; }
 
 #team1, #team2, #team3, #team4,
 #team5, #team6, #team7, #team8 {
