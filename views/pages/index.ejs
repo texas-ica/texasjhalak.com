@@ -2,35 +2,27 @@
 <html>
 <head>
     <title>Jhalak</title>
-    <% include ../partials/css.ejs %>
+    <% include ../partials/_css.ejs %>
 </head>
 <body>
-
-    <div id="landing-container">
-        <div id="landing" class="ui container">
-            <div class="ui secondary menu">
-                <div class="item">
-                    <img id="jhalak-logo" class="ui tiny image" src="img/logo.png">
-                </div>
-                <div class="right menu">
-                    <a class="item">Home</a>
-                    <a class="item" href="/about">About</a>
-                    <a class="item" href="/teams">Teams</a>
-                    <a class="item" href="/participate">Get Involved</a>
-                </div>
-            </div>
+    <div class="wrapper">
+        <div id="main-container" class="ui container">
+            <% include ../partials/_menu.ejs %>
             <div class="ui centered middle aligned grid">
                 <div class="sixteen wide column">
                     <div class="ui center aligned text container">
                         <h1 class="ui header">Jhalak</h1>
-                        <p>November 18 @ Hogg Auditorium</p>
-                        <div class="ui inverted button">Get Tickets</div>
+                        <h2 class="ui header">Cut the Frills, Bring the Skills</h2>
+                        <div class="clock-container">
+                            <div class="clock"></div>
+                        </div>
+                        <div class="ui button">Get Tickets</div>
                     </div>
                 </div>
             </div>
         </div>
     </div>
 
-    <% include ../partials/js.ejs %>
+    <% include ../partials/_scripts.ejs %>
 </body>
 </html>

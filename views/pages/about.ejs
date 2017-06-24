@@ -1,163 +1,41 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Jhalak - About</title>
-    <% include ../partials/css.ejs %>
+    <title>Jhalak</title>
+    <% include ../partials/_css.ejs %>
 </head>
 <body>
-
-    <div id="about-header">
+    <div class="header wrapper about">
         <div class="ui container">
-            <div class="ui secondary menu">
-                <div class="item">
-                    <img id="jhalak-logo" class="ui tiny image" src="img/logo.png">
-                </div>
-                <div class="right menu">
-                    <a class="item" href="/">Home</a>
-                    <a class="item" href="/about">About</a>
-                    <a class="item" href="/teams">Teams</a>
-                    <a class="item" href="/participate">Get Involved</a>
+            <% include ../partials/_menu.ejs %>
+            <h1 class="ui centered header">About</h1>
+        </div>
+    </div>
+
+    <div id="about" class="ui container">
+        <div class="ui three column stackable grid">
+            <div class="column">
+                <h3 class="ui header">BA/Legends</h3>
+                <p>Integer in enim mattis, gravida elit at, auctor dolor. Maecenas urna massa, tempus eget sem sit amet, vestibulum elementum nisi. Ut aliquet odio id magna blandit molestie. Suspendisse et tortor nec massa interdum iaculis in ultricies sem. Integer tincidunt condimentum dolor quis vehicula. Vivamus euismod odio urna, ultrices hendrerit orci sagittis ac. Proin sed neque nec est posuere pharetra vitae et tellus.</p>
+                <div class="ui small centered images">
+                    <img class="ui image" src="img/filler.jpg">
+                    <img class="ui image" src="img/filler.jpg">
                 </div>
             </div>
-            <div id="about" class="ui center aligned container">
-                <h1>ABOUT</h1>
+            <div class="column">
+                <h3 class="ui header">Jhalak</h3>
+                <p>Integer in enim mattis, gravida elit at, auctor dolor. Maecenas urna massa, tempus eget sem sit amet, vestibulum elementum nisi. Ut aliquet odio id magna blandit molestie. Suspendisse et tortor nec massa interdum iaculis in ultricies sem. Integer tincidunt condimentum dolor quis vehicula. Vivamus euismod odio urna, ultrices hendrerit orci sagittis ac. Proin sed neque nec est posuere pharetra vitae et tellus.</p>
+                <img class="ui centered small image" src="img/filler.jpg">
+            </div>
+            <div class="column">
+                <h3 class="ui header">AFSSA Partnership</h3>
+                <p>Integer in enim mattis, gravida elit at, auctor dolor. Maecenas urna massa, tempus eget sem sit amet, vestibulum elementum nisi. Ut aliquet odio id magna blandit molestie. Suspendisse et tortor nec massa interdum iaculis in ultricies sem. Integer tincidunt condimentum dolor quis vehicula. Vivamus euismod odio urna, ultrices hendrerit orci sagittis ac. Proin sed neque nec est posuere pharetra vitae et tellus.</p>
+                <img class="ui centered small image" src="img/filler.jpg">
             </div>
         </div>
     </div>
 
-    <!--
-    <div id="stats">
-        <div class="ui container">
-            <div class="ui three column centered middle aligned stackable grid">
-                <div class="column">
-                    <h1>8</h1>
-                    <h3>Teams</h3>
-                </div>
-                <div class="column">
-                    <h1>1100+</h1>
-                    <h3>Attendees</h3>
-                </div>
-            </div>
-        </div>
-    </div>
-    -->
-
-    <div id="overview">
-        <div id="overview-container" class="ui container">
-            <div class="ui centered middle aligned grid">
-                <div class="sixteen wide column">
-                    <div class="ui center aligned text container">
-                        <h1 id="overview-header">&nbsp;</h1>
-                        <p id="op1">Hosted by the Indian Cultural Association at The University of Texas at Austin, Jhalak is the LARGEST South Asian NATIONAL talent show in the State of Texas. With over $3,000 in prize money, the show seeks to showcase the best and brightest teams from all over the nation under one roof.</p>
-                        <p id="op2">Jhalak is a cultural extravaganza featuring educational videos, mouth-watering Indian food, and exhilarating dance performances. Celebrating its 16th year, Jhalak began with humble roots in the atrium of the UT business school. The event was known to draw crowds of people and quickly became a favorite to UT students. The need for a more intimate, indoor venue became evident and Jhalak moved yet again to Hogg Auditorium. Most notably, last year’s show sold out 15 minutes after the show began and over 1,100 people were in attendance.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <div id="tickets">
-        <div id="tickets-container" class="ui container">
-            <div class="ui centered middle aligned grid">
-                <div class="sixteen wide column">
-                    <div class="ui center aligned container">
-                        <h1 id="tickets-header">&nbsp;</h1>
-                        <div class="ui middle aligned stackable grid">
-                            <div id="tickets-show" class="eight wide center aligned column">
-                                <div class="ui centered circular medium image">
-                                    <img src="img/show.jpg">
-                                </div>
-                                <h3>Show Tickets</h3>
-                                <h3 class="available">Available!</h4>
-                                <div class="ui inverted button">Get Tickets</div>
-                            </div>
-                            <div id="tickets-party" class="eight wide center aligned column">
-                                <div class="ui centered circular medium image">
-                                    <img src="img/afterparty.jpg">
-                                </div>
-                                <h3>After Party Tickets</h3>
-                                <h3 class="sold out">Sold Out!</h4>
-                                <div class="ui inverted button">Get Tickets</div>
-                            </div>
-                        </div>
-                    </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <div id="venue">
-        <div id="venue-container" class="ui container">
-            <div class="ui centered middle aligned grid">
-                <div class="sixteen wide column">
-                    <div class="ui center aligned text container">
-                        <h1 id="venue-header">&nbsp;</h1>
-                        <p>This year Jhalak will be held in Hogg Auditorium. Located on the University of Texas campus, Hogg Auditorium has a seating capacity of 1200 and provides audience members with an excellent view of the stage and performers. Having just undergone renovations, Hogg Auditorium blends traditional architecture of a historic landmark with state of the art performing facilities.</p>
-                        <div class="ui inverted button">Learn More</div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <div id="partners">
-        <div id="partners-container" class="ui container">
-            <div class="ui middle aligned stackable grid">
-                <div class="sixteen wide column">
-                    <div class="ui center aligned text container">
-                        <h1 id="partners-header">&nbsp;</h1>
-                        <div class="ui middle aligned stackable grid">
-                            <div class="four wide column">
-                                <img class="ui centered small image" src="img/vipcars.jpg">
-                            </div>
-                            <div class="four wide column">
-                                <img class="ui centered tiny image" src="img/ba.jpg">
-                            </div>
-                            <div class="four wide column">
-                                <img class="ui centered tiny image" src="img/legends.jpg">
-                            </div>
-                            <div class="four wide column">
-                                <img class="ui centered tiny image" src="img/ddn.jpg">
-                            </div>
-                            <div class="four wide column">
-                                <img class="ui centered small image" src="img/universitycoop.jpg">
-                            </div>
-                            <div class="four wide column">
-                                <img class="ui centered small image" src="img/juiceland.jpg">
-                            </div>
-                            <div class="four wide column">
-                                <img class="ui centered small image" src="img/plan2.jpg">
-                            </div>
-                            <div class="four wide column">
-                                <img class="ui centered small image" src="img/ee.jpg">
-                            </div>
-                            <div class="four wide column">
-                                <img class="ui centered small image" src="img/dce.jpg">
-                            </div>
-                            <div class="four wide column">
-                                <img class="ui centered small image" src="img/princetonreview.jpg">
-                            </div>
-                            <div class="four wide column">
-                                <img class="ui centered small image" src="img/humanecology.jpg">
-                            </div>
-                            <div class="four wide column">
-                                <img class="ui centered small image" src="img/analytics.jpg">
-                            </div>
-                            <div class="four wide column">
-                                <img class="ui centered small image" src="img/saucenspice.jpg">
-                            </div>
-                            <div class="four wide column">
-                                <img class="ui centered small image" src="img/orchestra.jpg">
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <% include ../partials/footer.ejs %>
-    <% include ../partials/js.ejs %>
+    <% include ../partials/_footer.ejs %>
+    <% include ../partials/_scripts.ejs %>
 </body>
 </html>

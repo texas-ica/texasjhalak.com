@@ -1,353 +1,318 @@
 @import "colors";
 
+@mixin text($weight, $size, $spacing) {
+    font-weight: $weight;
+    font-size: $size;
+    letter-spacing: $spacing;
+}
+
+@mixin header() {
+    background-attachment: fixed;
+    background-position: center;
+    background-size: cover;
+    height: 60%;
+}
+
 * {
-    font-family: "Roboto", sans-serif;
-}
-
-a {
-    color: $blue;
-    transition: all 0.1s linear;
-}
-
-a:hover {
-    color: $dark-blue;
+    font-family: "Roboto Condensed", sans-serif !important;
 }
 
 body {
+    background-color: $dark-gray;
+    background-attachment: fixed;
+}
+
+// Icons
+
+i.icon {
+    font-family: Icons !important;
+    margin: 0% 0.5% 0% 0.5%;
+    transition: all 0.1s linear;
+}
+
+i.icon:hover {
+    color: $yellow;
+}
+
+// Buttons
+
+.ui.button {
+    color: $white;
+    text-transform: uppercase;
+    background-color: transparent;
+    border: 2px solid $white;
+    border-radius: 0px;
+    transition: all 0.1s linear;
+    @include text(700, 1.1em, 0.2rem);
+}
+
+.ui.button:hover {
+    color: $black;
+    background-color: $white;
+}
+
+// Links
+
+a {
+    color: $yellow;
+}
+
+a:hover {
+    color: $yellow;
+    text-decoration: underline;
+}
+
+// Navigation
+
+.ui.secondary.menu {
+    a.item {
+        margin-top: 3%;
+        color: $white;
+        text-transform: uppercase;
+        @include text(300, 1.1rem, 0.08em);
+    }
+
+    a.item:hover {
+        color: $white;
+    }
+}
+
+// Footer
+
+.ui.footer {
+    padding: 3%;
+    color: $white;
+    text-transform: uppercase;
+    font-size: 1.2em;
     background-color: $black;
 }
 
-#jhalak-logo {
-    width: 120px;
-}
+// Home page
 
-// GENERAL
-
-.ui.button {
-    border-radius: 0rem;
-}
-
-.ui.inverted.button {
-    color: $black;
-    font-family: "Roboto", sans-serif;
-    background-color: $white;
-    border: 0px;
-    text-transform: uppercase;
-    font-size: 1.5em;
-    box-shadow: inset 0px 0px 0px 0px $yellow !important;
-    transition: all ease 0.3s;
-}
-
-.ui.inverted.button:hover {
-    background-color: $yellow;
-    border-color: $yellow;
-    box-shadow: inset 0px 100px 0px 0px $yellow !important;
-}
-
-// LANDING PAGE
-
-#landing-container {
+.wrapper {
     background-image: url("../img/background.jpg");
     background-size: cover;
 }
 
-#landing {
+.clock-container {
+    text-align: center;
+    margin-top: 3%;
+}
+
+.clock {
+    display: inline-block;
+    width: auto;
+}
+
+#main-container {
     height: 100vh;
+    color: $white;
 
-    h1, p {
+    h1.ui.header {
+        margin: 0px;
+        padding: 0px;
         color: $white;
-    }
-
-    h1 {
-        font-family: "Helvetica Neue", sans-serif;
-        font-weight: 100;
-        font-size: 10em;
         text-transform: uppercase;
-        margin: -3% 0%;
-        letter-spacing: 35px;
+        line-height: 1em;
+        @include text(700, 8em, 0.05em);
     }
 
-    p {
-        font-size: 1.5em;
+    h2.ui.header {
+        margin: 0px;
+        margin-bottom: 2%;
+        padding: 0px;
+        color: $white;
+        text-transform: uppercase;
+        font-style: italic;
+        @include text(400, 2em, 0em);
     }
 
     .ui.grid {
-        height: 80%;
-    }
-
-    .ui.secondary.menu {
-        padding-top: 2%;
+        height: 70%;
     }
 }
 
-// HEADERS
+// Headers
 
-#about-header, #teams-header, #participate-header {
-    background-position: center;
-    background-size: cover;
-    padding: 2% 0%;
-}
+.header.wrapper {
+    @include header;
 
-#about-header {
-    background-image: url("../img/header/about.jpg");
-
-}
-
-#teams-header {
-    background-image: url("../img/header/teams.jpg");
-}
-
-#participate-header {
-    background-image: url("../img/header/participate.jpg");
-    background-position: top;
-}
-
-#about, #teams, #participate {
-    padding: 10%;
-
-    h1 {
-        font-family: "Roboto", sans-serif;
-        font-weight: 700;
-        font-size: 8em;
-        color: $white;
-    }
-}
-
-// NAVIGATION
-
-.ui.secondary.menu a.item {
-    font-family: "Roboto", sans-serif;
-    font-weight: 400;
-    font-size: 1.2em;
-    text-transform: uppercase;
-    color: $white;
-    transition: all 0.1s linear;
-}
-
-.ui.secondary.menu a.item:hover {
-    background: none;
-    color: $yellow;
-}
-
-// ABOUT
-
-.ui.header {
-    color: $white;
-}
-
-#overview, #tickets, #partners, #venue, #liaison, #sponsor {
-    padding: 2%;
-    padding-bottom: 4%;
-
-    .ui.header {
-        padding: 2%;
-        font-family: "Roboto", sans-serif;
-        font-size: 2em;
-        text-transform: uppercase;
-    }
-}
-
-#overview, #tickets, #partners, #venue {
-    h1 {
-        font-family: "Roboto", sans-serif;
-        color: $white;
-        text-transform: uppercase;
-        font-size: 5em;
-        margin-bottom: 5%;
-
-        background: rgb(245,203,92);
-        background: -moz-linear-gradient(-45deg,  rgba(245,203,92,1) 50%, rgba(255,255,255,1) 50%, rgba(255,255,255,1) 50%);
-        background: -webkit-linear-gradient(-45deg,  rgba(245,203,92,1) 50%,rgba(255,255,255,1) 50%,rgba(255,255,255,1) 50%);
-        background: linear-gradient(135deg,  rgba(245,203,92,1) 50%,rgba(255,255,255,1) 50%,rgba(255,255,255,1) 50%);
-        filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f5cb5c', endColorstr='#ffffff',GradientType=1 );
-
-        background-size: cover;
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
-    }
-}
-
-#stats {
-    background-color: $black;
-    padding: 2%;
-
-    h1, h3 {
-        font-family: "Roboto", sans-serif;
-    }
-
-    h1 {
-        color: $yellow;
-        font-size: 5em;
-        text-align: center;
-        margin: 0px;
-    }
-
-    h3 {
-        color: $white;
-        text-align: center;
-        margin: 0px;
-        text-transform: uppercase;
-    }
-}
-
-#overview {
-    background-color: $dark-black;
-    border-bottom: 1px solid $yellow;
-
-    p {
-        color: $white;
-        font-family: "Roboto", sans-serif;
-        text-align: left;
-    }
-}
-
-#overview-container, #tickets-container, #venue-container,
-#partners-container {
-    height: 100vh;
-
-    .ui.grid {
+    .ui.container {
         height: 100%;
     }
+
+    .ui.centered.header {
+        margin-top: 5%;
+        color: $white;
+        text-transform: uppercase;
+        @include text(700, 3em, 0.05em);
+    }
 }
 
-#tickets {
-    background-color: $dark-black;
-    border-bottom: 1px solid $yellow;
+// About page
 
-    .ui.header {
-        color: $white;
-    }
+.header.wrapper.about {
+    background-image: url("../img/headers/about.jpg");
+}
 
-    h3 {
-        color: $white;
+#about {
+    padding: 5% 0% 5% 0%;
+
+    h3.ui.header {
         margin: 0px;
-        font-family: inherit;
-        font-size: 2em;
+        padding: 0px;
+        color: $white;
         text-transform: uppercase;
-        //text-align: center;
+        line-height: 1em;
+        @include text(700, 2rem, 0.04em);
     }
 
-    .ui.image {
-        margin-bottom: 5%;
-    }
-
-    .available {
-        color: $green;
-    }
-
-    .sold.out {
-        color: $red;
-    }
-
-    .ui.inverted.button {
-        margin-top: 2%;
-        font-size: 1em;
+    p {
+        color: $gray;
+        margin: 5% 0% 5% 0%;
+        line-height: 1.375em;
+        @include text(300, 1.1rem, 0.04em);
     }
 }
 
-#partners {
-    background-color: $dark-black;
+// Show page
+
+.header.wrapper.show {
+    background-image: url("../img/headers/show.jpg");
+}
+
+#show {
+    padding: 5% 0% 5% 0%;
+
+    h2.ui.header {
+        margin: 0px;
+        padding: 0px;
+        color: $white;
+        text-transform: uppercase;
+        line-height: 1em;
+        @include text(400, 2rem, 0.125em);
+    }
+
+    p {
+        color: $gray;
+        margin: 2% 0% 4% 0%;
+        line-height: 1.375em;
+        @include text(300, 1.1rem, 0.04em);
+    }
+
+    p.meta {
+        //margin-bottom: 0%;
+        text-transform: uppercase;
+        @include text(700, 1.1rem, 0.2em);
+    }
+}
+
+// After party page
+
+.header.wrapper.afterparty {
+    background-image: url("../img/headers/club.jpg");
+}
+
+.subsection {
+    background-color: #3FBFBF;
+    background-image: url("../img/headers/lights.jpg");
+    background-attachment: fixed;
+    background-size: cover;
+}
+
+#apinfo {
+    color: $white;
 
     .ui.header {
         color: $black;
     }
-}
 
-#venue {
-    background-color: $dark-black;
-    border-bottom: 1px solid $yellow;
-
-    p {
-        color: $white;
-        text-align: left;
+    a:hover {
+        text-decoration: none;
     }
 
-    .ui.inverted.button {
-        margin-top: 2%;
-        font-size: 1em;
-        border-color: $white;
-        text-transform: capitalize;
-        box-shadow: inset 0px 0px 0px 0px $yellow !important;
-    }
-
-    .ui.inverted.button:hover {
-        box-shadow: inset 0px 100px 0px 0px $yellow !important;
-        background-color: $blue;
-    }
-}
-
-
-// TEAMS
-
-#team1, #team2, #team3, #team4,
-#team5, #team6, #team7, #team8 {
-
-    .ui.grid {
-        height: 100vh;
-    }
-
-    h2 {
-        font-family: "Open Sans";
-        font-size: 12em;
+    h3.ui.header {
         text-transform: uppercase;
-        letter-spacing: -0.1em;
-        line-height: 75%;
-        margin-bottom: 7%;
+        @include text(300, 4rem, 0.1em);
     }
 
-    border-bottom: 1px solid #FAFAFA;
+    h4.ui.header {
+        text-transform: uppercase;
+        @include text(700, 1.8rem, 0.3em);
+    }
+
+    .wrapper-col {
+        margin: 5% 0% 5% 0%;
+    }
+
+    .text {
+        text-align: center;
+        text-transform: uppercase;
+        @include text(700, 1.1rem, 0.2em);
+    }
+
+    .box {
+        padding: 10%;
+        height: 350px;
+        background-color: $white;
+    }
 }
 
-#team1, #team3, #team5, #team7 {
-    color: $black;
-    background-color: $yellow;
+// Get Involved page
+.header.wrapper.getinvolved {
+    background-image: url("../img/headers/participate.jpg");
 }
 
-#team2, #team4, #team6, #team8 {
+#getinvolved {
     color: $white;
-    background-color: $black;
-}
+    padding-top: 5%;
 
-// PARTICIPATE
-
-#liaison {
-    background-color: $white;
-
-    h2 {
-        color: $black;
+    .ui.container {
+        padding-bottom: 5%;
     }
 
-    .ui.inverted.button {
-        margin-top: 2%;
-        font-size: 1em;
-        text-transform: capitalize;
-        background-color: $black;
+    h2.ui.header {
+        margin: 0px;
+        padding: 0px;
         color: $white;
+        text-transform: uppercase;
+        line-height: 1em;
+        @include text(400, 2rem, 0.125em);
     }
-
-    .ui.inverted.button:hover {
-        color: $white;
-    }
-}
-
-#sponsor {
-    background-color: $black;
 
     p {
-        color: $white;
-    }
-
-    .ui.inverted.button {
-        margin-top: 2%;
-        font-size: 1em;
-        text-transform: capitalize;
+        color: $gray;
+        margin: 2% 0% 4% 0%;
+        line-height: 1.375em;
+        @include text(300, 1.1rem, 0.04em);
     }
 }
 
-// FOOTER
+// Sponsors page
+.header.wrapper.sponsors {
+    background-image: url("../img/headers/sponsors.jpg");
+}
 
-.ui.footer {
-    font-family: "Roboto", sans-serif;
-    padding: 2%;
-    background-color: $white;
+#sponsors {
+    color: $white;
+    padding: 5% 0% 5% 0%;
+
+    p {
+        color: $gray;
+        margin: 2% 0% 4% 0%;
+        line-height: 1.375em;
+        @include text(300, 1.1rem, 0.04em);
+    }
+
+    h2.ui.header {
+        padding: 0px;
+        color: $white;
+        text-transform: uppercase;
+        line-height: 1em;
+        @include text(400, 2rem, 0.125em);
+    }
+
+    h2.ui.header:last-of-type {
+        margin-top: 5%;
+    }
 }

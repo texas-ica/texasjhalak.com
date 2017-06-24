@@ -14,12 +14,20 @@ app.get('/about', function(req, res) {
     res.render('pages/about');
 });
 
-app.get('/teams', function(req, res) {
-    res.render('pages/teams');
+app.get('/show', function(req, res) {
+    res.render('pages/show');
 });
 
-app.get('/participate', function(req, res) {
-    res.render('pages/participate');
+app.get('/afterparty', function(req, res) {
+    res.render('pages/afterparty');
+});
+
+app.get('/getinvolved', function(req, res) {
+    res.render('pages/getinvolved');
+});
+
+app.get('/sponsors', function(req, res) {
+    res.render('pages/sponsors');
 });
 
 app.listen(app.get('port'), function() {

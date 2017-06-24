@@ -1,25 +1,15 @@
 {
   "name": "jhalak",
   "version": "1.0.0",
-  "description": "Jhalak competition website",
+  "description": "",
   "main": "app.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/texas-ica/texasjhalak.com.git"
-  },
   "author": "Shrey Desai",
   "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/texas-ica/texasjhalak.com/issues"
-  },
-  "homepage": "https://github.com/texas-ica/texasjhalak.com#readme",
   "dependencies": {
     "ejs": "^2.5.6",
-    "express": "^4.15.2",
-    "mongodb": "^2.2.26",
-    "mongoose": "^4.9.7"
+    "express": "^4.15.3"
   }
 }
