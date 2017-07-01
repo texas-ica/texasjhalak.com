@@ -8,9 +8,9 @@
 
 @mixin header() {
     background-attachment: fixed;
-    background-position: center;
+    background-position: bottom;
     background-size: cover;
-    height: 60%;
+    height: 40%;
 }
 
 * {
@@ -59,7 +59,6 @@ a {
 
 a:hover {
     color: $yellow;
-    text-decoration: underline;
 }
 
 // Navigation
@@ -85,6 +84,14 @@ a:hover {
     text-transform: uppercase;
     font-size: 1.2em;
     background-color: $black;
+
+    i.icon {
+        color: $white !important;
+    }
+
+    i.icon:hover {
+        color: $yellow !important;
+    }
 }
 
 // Home page
@@ -190,7 +197,7 @@ a:hover {
         color: $white;
         text-transform: uppercase;
         line-height: 1em;
-        @include text(400, 2rem, 0.125em);
+        @include text(400, 2.5rem, 0.125em);
     }
 
     p {
