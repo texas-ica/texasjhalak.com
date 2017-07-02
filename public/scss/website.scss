@@ -212,6 +212,11 @@ a:hover {
         text-transform: uppercase;
         @include text(700, 1.1rem, 0.2em);
     }
+
+    #hype {
+        color: $yellow;
+        @include text(300, 1.5rem, 0.04em);
+    }
 }
 
 // After party page

@@ -155,6 +155,11 @@ a:hover {
     font-weight: 700;
     font-size: 1.1rem;
     letter-spacing: 0.2em; }
+  #show #hype {
+    color: #F5CB5C;
+    font-weight: 300;
+    font-size: 1.5rem;
+    letter-spacing: 0.04em; }
 
 .header.wrapper.afterparty {
   background-image: url("../img/headers/club.jpg"); }
