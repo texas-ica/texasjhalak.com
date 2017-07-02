@@ -10,7 +10,7 @@
     background-attachment: fixed;
     background-position: bottom;
     background-size: cover;
-    height: 40%;
+    height: 60%;
 }
 
 * {
@@ -268,6 +268,7 @@ a:hover {
 // Get Involved page
 .header.wrapper.getinvolved {
     background-image: url("../img/headers/participate.jpg");
+    background-position: center !important;
 }
 
 #getinvolved {

@@ -96,7 +96,7 @@ a:hover {
   background-attachment: fixed;
   background-position: bottom;
   background-size: cover;
-  height: 40%; }
+  height: 60%; }
   .header.wrapper .ui.container {
     height: 100%; }
   .header.wrapper .ui.centered.header {
@@ -195,7 +195,8 @@ a:hover {
     background-color: #FFFFFF; }
 
 .header.wrapper.getinvolved {
-  background-image: url("../img/headers/participate.jpg"); }
+  background-image: url("../img/headers/participate.jpg");
+  background-position: center !important; }
 
 #getinvolved {
   color: #FFFFFF;
