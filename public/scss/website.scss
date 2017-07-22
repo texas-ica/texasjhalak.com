@@ -121,6 +121,7 @@ a:hover {
         color: $white;
         text-transform: uppercase;
         line-height: 1em;
+        background: rgba(0, 0, 0, 0.25);
         @include text(700, 8em, 0.05em);
     }
 
@@ -131,6 +132,7 @@ a:hover {
         color: $white;
         text-transform: uppercase;
         font-style: italic;
+        background: rgba(0, 0, 0, 0.25);
         @include text(400, 2em, 0em);
     }
 
