@@ -43,6 +43,10 @@ a:hover {
   letter-spacing: 0.08em; }
 .ui.secondary.menu a.item:hover {
   color: #FFFFFF; }
+.ui.secondary.menu .active.item {
+  color: #FFFFFF; }
+.ui.secondary.menu .active.item:hover {
+  color: #FFFFFF; }
 
 .ui.footer {
   padding: 3%;
@@ -58,6 +62,9 @@ a:hover {
 .wrapper {
   background-image: url("../img/background.jpg");
   background-size: cover; }
+  @media only screen and (max-device-width: 500px) {
+    .wrapper {
+      background-image: url("../img/background_mobile.jpg"); } }
 
 .clock-container {
   text-align: center;
@@ -99,6 +106,9 @@ a:hover {
   background-position: bottom;
   background-size: cover;
   height: 60%; }
+  @media only screen and (max-device-width: 500px) {
+    .header.wrapper {
+      height: 40%; } }
   .header.wrapper .ui.container {
     height: 100%; }
   .header.wrapper .ui.centered.header {
@@ -111,6 +121,9 @@ a:hover {
 
 .header.wrapper.about {
   background-image: url("../img/headers/about.jpg"); }
+  @media only screen and (max-device-width: 500px) {
+    .header.wrapper.about {
+      background-image: url("../img/headers_mobile/about.jpg"); } }
 
 #about {
   padding: 5% 0% 5% 0%; }
@@ -133,6 +146,9 @@ a:hover {
 
 .header.wrapper.show {
   background-image: url("../img/headers/show.jpg"); }
+  @media only screen and (max-device-width: 500px) {
+    .header.wrapper.show {
+      background-image: url("../img/headers_mobile/show.jpg"); } }
 
 #show {
   padding: 5% 0% 5% 0%; }
@@ -204,6 +220,9 @@ a:hover {
 .header.wrapper.getinvolved {
   background-image: url("../img/headers/participate.jpg");
   background-position: center !important; }
+  @media only screen and (max-device-width: 500px) {
+    .header.wrapper.getinvolved {
+      background-image: url("../img/headers_mobile/participate.jpg"); } }
 
 #getinvolved {
   color: #FFFFFF;
@@ -229,6 +248,9 @@ a:hover {
 
 .header.wrapper.sponsors {
   background-image: url("../img/headers/sponsors.jpg"); }
+  @media only screen and (max-device-width: 500px) {
+    .header.wrapper.sponsors {
+      background-image: url("../img/headers_mobile/sponsors.jpg"); } }
 
 #sponsors {
   color: #FFFFFF;

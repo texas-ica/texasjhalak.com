@@ -74,6 +74,14 @@ a:hover {
     a.item:hover {
         color: $white;
     }
+
+    .active.item {
+        color: $white;
+    }
+
+    .active.item:hover {
+        color: $white;
+    }
 }
 
 // Footer
@@ -99,6 +107,9 @@ a:hover {
 .wrapper {
     background-image: url("../img/background.jpg");
     background-size: cover;
+    @media only screen and (max-device-width: 500px) {
+        background-image: url("../img/background_mobile.jpg");
+    }
 }
 
 .clock-container {
@@ -146,6 +157,10 @@ a:hover {
 .header.wrapper {
     @include header;
 
+    @media only screen and (max-device-width: 500px) {
+        height: 40%;
+    }
+
     .ui.container {
         height: 100%;
     }
@@ -162,6 +177,9 @@ a:hover {
 
 .header.wrapper.about {
     background-image: url("../img/headers/about.jpg");
+    @media only screen and (max-device-width: 500px) {
+        background-image: url("../img/headers_mobile/about.jpg");
+    }
 }
 
 #about {
@@ -188,6 +206,9 @@ a:hover {
 
 .header.wrapper.show {
     background-image: url("../img/headers/show.jpg");
+    @media only screen and (max-device-width: 500px) {
+        background-image: url("../img/headers_mobile/show.jpg");
+    }
 }
 
 #show {
@@ -276,6 +297,9 @@ a:hover {
 .header.wrapper.getinvolved {
     background-image: url("../img/headers/participate.jpg");
     background-position: center !important;
+    @media only screen and (max-device-width: 500px) {
+        background-image: url("../img/headers_mobile/participate.jpg");
+    }
 }
 
 #getinvolved {
@@ -306,6 +330,9 @@ a:hover {
 // Sponsors page
 .header.wrapper.sponsors {
     background-image: url("../img/headers/sponsors.jpg");
+    @media only screen and (max-device-width: 500px) {
+        background-image: url("../img/headers_mobile/sponsors.jpg");
+    }
 }
 
 #sponsors {
