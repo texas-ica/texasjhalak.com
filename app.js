@@ -1,6 +1,7 @@
 var express = require('express');
 var app = express();
 
+app.set('trust proxy');
 app.set('view engine', 'ejs');
 app.set('port', (process.env.PORT || 3000));
 

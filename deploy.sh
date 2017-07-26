@@ -1,28 +1,28 @@
 # Remove old repo
-echo "Removing old repository"
+echo "(1/7) Removing old repository"
 rm -rf texasjhalak.com
 
 # Clone new repo
-echo "Cloning new repository"
+echo "(2/7) Cloning new repository"
 git clone https://github.com/texas-ica/texasjhalak.com &> /dev/null
 
 # Stop NGINX
-echo "Shutting down NGINX"
+echo "(3/7) Shutting down NGINX"
 sudo service nginx stop &> /dev/null
 
 # Stop Node processes
-echo "Stopping Node.js"
+echo "(4/7) Stopping Node.js"
 sudo killall node &> /dev/null
 
 # Set up Node server
-echo "Setting up Node.js server"
+echo "(5/7) Setting up Node.js server"
 cd texasjhalak.com
 npm install &> /dev/null
 
 # Start NGINX server
-echo "Starting NGINX server"
+echo "(6/7) Starting NGINX server"
 sudo service nginx start &> /dev/null
 
 # Start server
-echo "Starting Node.js server"
+echo "(7/7) Starting Node.js server"
 sudo nohup node app.js &> /dev/null
