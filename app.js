@@ -18,20 +18,21 @@ var rtm = new RtmClient(token);
 // Date/time configuration
 var dt = dateTime.create()
 
-function logEvent(req) {
+app.use(function(req, res, next) {
+    var method = req.method;
+    var url = req.url
     var ip = req.headers['x-forwarded-for'];
-    var timestamp = dt.format('m/d H:M');
+    var time = new Date(dt.getTime());
 
-    if (ip) {
-        var message = 'GET / - ' + ip + ' - ' + timestamp;
-        rtm.sendMessage(message, channel, function(err) {
-            if (err) console.log(err);
-        });
-    }
-}
+    var message = ip + ' - ' + time + ' - ' + method + ' ' + url;
+    rtm.sendMessage(message, channel, function(err) {
+        if (err) console.log(err);
+    });
+
+    next();
+});
 
 app.get('/', function(req, res) {
-    logEvent(req);
     res.render('pages/index');
 });
 
