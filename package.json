@@ -9,6 +9,7 @@
   "author": "Shrey Desai",
   "license": "ISC",
   "dependencies": {
+    "@slack/client": "^3.10.0",
     "ejs": "^2.5.6",
     "express": "^4.15.3"
   }
