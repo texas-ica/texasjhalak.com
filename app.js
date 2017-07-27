@@ -1,6 +1,7 @@
 var express = require('express');
 var dateTime = require('node-datetime');
 var RtmClient = require('@slack/client').RtmClient;
+var winston = require('winston');
 
 // Express server configuration
 var app = express();
@@ -16,15 +17,26 @@ var channel = 'C6EGUFEEA';
 var rtm = new RtmClient(token);
 
 // Date/time configuration
-var dt = dateTime.create()
+var dt = dateTime.create();
+
+// Winston configuration
+winston.configure({
+    transports: [
+        new (winston.transports.File)({ filename: 'access.log' })
+    ]
+});
 
 app.use(function(req, res, next) {
     var method = req.method;
     var url = req.url
     var ip = req.headers['x-forwarded-for'];
-    var time = new Date(dt.getTime());
+    var agent = req.headers['user-agent'];
+    var time = new Date(dt.now());
 
-    var message = ip + ' - ' + time + ' - ' + method + ' ' + url;
+    var message = ip + ' - ' + time + ' - ' + agent + ' - ' + method + ' ' + url;
+
+    winston.info(message);
+
     rtm.sendMessage(message, channel, function(err) {
         if (err) console.log(err);
     });
