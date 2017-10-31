@@ -68,6 +68,14 @@ app.get('/sponsors', function(req, res) {
     res.render('pages/sponsors');
 });
 
+app.get('/success-show', function(req,res) {
+    res.render('pages/success-show');
+});
+
+app.get('/success-ap', function(req,res) {
+    res.render('pages/success-ap');
+});
+
 app.listen(app.get('port'), function() {
     console.log('Server started on 127.0.0.1');
     try {
