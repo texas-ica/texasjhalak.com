@@ -29,7 +29,7 @@ makeActive(path);
 
 // clock
 var currentDate = new Date();
-var futureDate  = new Date(2017, 11, 18);
+var futureDate  = new Date(2018, 11, 17);
 var diff = futureDate.getTime() / 1000 - currentDate.getTime() / 1000;
 
 var clock = $('.clock').FlipClock(diff, {
